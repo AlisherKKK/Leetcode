@@ -16,8 +16,20 @@
  * }
  */
 class Solution {
+    ListNode ln = null;
     public boolean isPalindrome(ListNode head) {
-        
+        String r1 = "";
+        String r2 = "";
+        ListNode c = null;
+        if (head==null)
+            return true;
+        do{
+            c = c==null ? head : c.next;
+            r1+=c.val;
+            r2=c.val+r2;
+        }
+        while(c.next!=null);
+        return r1.equals(r2);
     }
 }
 // @lc code=end

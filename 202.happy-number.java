@@ -14,7 +14,6 @@ class Solution {
         while (true){
             String[] s = (ne+"").split("");
             int re = 0;
-            System.out.println(Arrays.toString(s));
             for (String i : s)
                 re += Math.pow(Integer.parseInt(i),2);
             if (re == 1)
